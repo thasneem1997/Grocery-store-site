@@ -1,10 +1,11 @@
 import { useState } from "react";
 const ListItem =({data})=>
 {
-    const [cart,setcart]=useState("no items added to cart")
+    // const [cart,setcart]=useState("")
+    const [counter,setcount]=useState(0)
  return (
 <div className="item-card">
-    <img src="/assets/gallery.png" alt="img not found"/>
+    <img src={`/assets/${data.thumbnail}`} alt="img not found"/>
 
    
     <div className="pricing">
@@ -12,12 +13,25 @@ const ListItem =({data})=>
     <small><s>{data.discoundprice}</s></small>
     <p style={{ margin: '10px',
         fontSize: '18px'}}>{data.title}</p>
-    <h4 className="cartadd">{cart}</h4>
+   
    </div>
-   <div>
-    <button className="cart-add" onClick={()=>setcart("item added to cart")}>Add to cart
+   {
+    counter<1? <div>
+    <button className="cart-add" onClick={()=>setcount(counter+1)}>Add to cart
 <img src="/assets/cart.png" className="icon-cart"/></button>
+
+   </div>:<div className="cart-addon">
+    <button   onClick={()=>setcount(counter+1)}>+</button>
+    <button>{counter}</button>
+    <button onClick={() => {
+  if (counter > 0) {
+    setcount(counter - 1);
+  }
+}}> - </button>
    </div>
+   }
+  
+   
 
 </div>
 
