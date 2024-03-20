@@ -1,0 +1,43 @@
+.subheader-container {
+    position: sticky;
+    z-index: 1024;
+    top: 66px;
+}
+
+.subheader-container ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: white;
+    box-shadow: 0 15px 10px -15px #9841412b;
+    padding: 0 32px;
+    overflow-x: auto;
+}
+
+.subheader-container ul li a {
+    display: inline-block;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    transition: #ed752a 100ms ease-in-out;
+    white-space: nowrap;
+}
+
+
+.subheader-container ul li a:hover {
+    background-color: #ed752a; /* Replace with the actual color value */
+    color: #fff/* Replace with actual color value or #fff if it refers to white */
+}
+.active a{
+    background-color: #ed752a; /* Replace with the actual color value */
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .subheader-container ul {
+        padding: 0 16px;
+    }
+}
