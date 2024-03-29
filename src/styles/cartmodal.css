@@ -1,0 +1,164 @@
+/* Base styling for the checkout modal */
+.checkout-modal {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-modal h2 {
+    margin-top: 8px;
+    margin-bottom: 24px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+/* Styling for the list of items in the cart */
+.checkout-modal_list {
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    min-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.checkout-modal_list-item {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.img-wrap {
+    flex-basis: 20%;
+    max-width: 20%;
+    padding: 5px;
+}
+
+.img-wrap img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.information {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.information h4 {
+    margin-top: 0;
+    margin-bottom: 4px;
+    color: rgb(233, 97, 37);
+    font-weight: 500;
+    letter-spacing: 0.02px;
+}
+
+.pricing {
+    display: flex;
+    align-items: baseline;
+}
+
+.pricing span {
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.pricing small {
+    font-size: 16px;
+    color: #666;
+}
+
+.cart-addon {
+    display: flex;
+    align-items: center;
+}
+
+.cart-addon button {
+    background-color: #e67b10;
+    border: none;
+    padding: 5px 10px;
+   
+}
+
+.cart-addon .counter {
+    margin: 0 10px;
+}
+
+/* Empty cart styling */
+.empty-cart {
+    text-align: center;
+    margin: auto;
+    color: gray;
+    padding: 24px 0 48px;
+    font-size: 16px;
+}
+
+/* Footer styling with total amount and order button */
+.checkout-modal_footer {
+    border-top: 1px solid rgba(128, 128, 128, 0.288);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.totalAmount {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.totalAmount h4 {
+    margin: 0 16px;
+    color: #333;
+    font-size: 20px;
+}
+
+.checkout-modal_footer button {
+    align-self: center;
+    background-color: rgb(233, 97, 37);
+    color: white;
+    border: unset;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.checkout-modal_footer button:hover {
+    opacity: 0.85;
+}
+.order-container {
+    display: flex;
+    align-content: center;
+    vertical-align: middle;
+    min-height: 350px;
+    
+    &--success {
+        margin: auto;
+        text-align: center;
+
+        img {
+            max-width: 200px;
+        }
+
+        .message {
+            h1 {
+                margin: 0;
+            }
+            h1, span {
+                margin-top: 8px;
+            }
+            span {
+                color: blueviolet
+            }
+        }
+    }
+}
